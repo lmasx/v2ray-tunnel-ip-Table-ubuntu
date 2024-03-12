@@ -43,3 +43,15 @@ iptables -t nat -A PREROUTING -j DNAT --to-destination "forign-server-ip"
 iptables -t nat -A POSTROUTING -j MASQUERADE
 exit 0
 ```
+6-با این دستور bash که درست کردیم با نام rc.local رو اجرا میکنیم.
+
+```bash
+sudo chmod +x /etc/rc.local
+```
+
+7-در نهایت سرور رو ریبوت کنید.بعد از ریبوت میتونید برقرار شددن تونل رو با دستور زیر بررسی کنید.یا آدرس و پورت پنل رو با آی پی سرور ایران در مرور گر بزنید اگر لاگین براتون بیاد یعنی کار تمومه.
+```bash
+sudo iptables -L -n -t nat
+```
+
+
